@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	_ "github.com/mattn/go-sqlite3"
 	"html/template"
 	"net/http"
 )
@@ -34,9 +33,4 @@ func getColors(writer http.ResponseWriter, request *http.Request) {
 type Page struct {
 	PageTitle string
 	ColorRGB  template.CSS
-}
-
-type Color struct {
-	rgb  string
-	name string
 }
